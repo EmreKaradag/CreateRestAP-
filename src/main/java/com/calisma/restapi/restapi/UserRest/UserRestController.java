@@ -24,7 +24,7 @@ DB db = new DB();
     }
     System.out.println("apiKey:" + apiKey);
 
-    List<CustomerPro> ls = dataResult(); // burasının bir defa çalışması için yaptık. dataresult bir defa tetiklenir fakat 2 iş yapar.
+    List<CustomerPro> ls = dataResult(); 
     if(ls.size()==0){
       hm.put("statu",false);
       hm.put("message", "Kullanıcı listesinde üye yok.");
