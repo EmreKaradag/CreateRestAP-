@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class UserController {
   @RequestMapping(value = "/user", method = RequestMethod.GET)
-  @ResponseBody // geriye jsp veya spring ifadesi dönmeyecekse responsebody kullanılır.Sadece spring ifadeyi kullan
+  @ResponseBody
   public String user(Model model){
     return "Hoşgeldin <b>Kullanıcı</b>";
   }
