@@ -8,7 +8,7 @@ public class Util {
 
   public static boolean apiControl(String apiKey, DB db){
     boolean statu = false;
-    if(apiKey.equals("")){  // yanlış api key gelirse direk message düşsün.UserRest
+    if(apiKey.equals("")){  
       return statu;
     }
     try{
@@ -20,7 +20,7 @@ public class Util {
         statu=true;
         int aid = rs.getInt("aid");
         int count = rs.getInt("count");
-        count = count +1; // kaç defa kullandıgını kontrol ediyorum.apikey ile kaç defa sorgu yaptı çağırdı.
+        count = count +1; 
         String q = "update admin set count = ? where aid = ?";
         PreparedStatement pr = db.connect(q);
         pr.setInt(1, count);
